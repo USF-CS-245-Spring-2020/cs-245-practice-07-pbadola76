@@ -1,4 +1,5 @@
-public class ArrayStack<T> implements Stack<T>{
+public class ArrayStack<T> implements Stack<T>
+{
 
     T[]arr = (T[]) new Object[10];
     int top = 0;
