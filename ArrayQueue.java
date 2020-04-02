@@ -14,7 +14,7 @@ public class ArrayQueue<T> implements Queue<T>
 	public void enqueue(T item)
 	{
 		if(size == arr.length)
-			growArray();
+			grow_array();
 		arr[(back%arr.length)] = item;
 		back++;
 		size++;
@@ -37,13 +37,13 @@ public class ArrayQueue<T> implements Queue<T>
 		return false;
 	}
 
-	public void growArray()
+	public void grow_array()
 	{
 		T [] temp = (T[]) new Object[arr.length*2];
 		for (int i = 0; i <= size; i++) 
 		{
-            temp[i] = arr[(front + i) % arr.length];
-        }
+            		temp[i] = arr[(front + i) % arr.length];
+        	}
 		front = 0;
 		back = size;
 		arr = temp;
