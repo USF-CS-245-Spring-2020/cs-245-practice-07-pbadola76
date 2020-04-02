@@ -6,7 +6,7 @@ public class ArrayStack<T> implements Stack<T>{
     public void push(T item)
     {
         if(top == arr.length)
-            growArray();
+            grow_array();
         arr[top] = item;
         top++; 
     }
@@ -32,7 +32,7 @@ public class ArrayStack<T> implements Stack<T>{
         return top == 0;
     }
 
-    private void growArray()
+    private void grow_array()
     {
         T [] temp = (T[]) new Object[arr.length*2];
         for(int i = 0; i < arr.length; i++)
