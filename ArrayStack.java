@@ -14,7 +14,7 @@ public class ArrayStack<T> implements Stack<T>{
     public T pop() throws Exception
     {
         if(top <= 0)
-            throw new IndexOutOfBoundsException();
+            IllegalArgumentException("empty");
         T taken = arr[top-1];
         top--;
         return taken;
@@ -23,7 +23,7 @@ public class ArrayStack<T> implements Stack<T>{
     public T peek() throws Exception
     {
         if(empty())
-            throw new IndexOutOfBoundsException();
+            IllegalArgumentException("empty");
         return arr[top];
     }
 
